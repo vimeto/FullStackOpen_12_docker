@@ -1,0 +1,156 @@
+Script started on Mon Jan 17 21:56:23 2022
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ docker container ls
+CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS         PORTS                     NAMES
+06379edf397c   mongo       "docker-entrypoint.s…"   33 minutes ago   Up 6 minutes   0.0.0.0:3456->27017/tcp   todo-backend_mongo_1
+c093bbd8ce0f   mysql:5.6   "docker-entrypoint.s…"   5 weeks ago      Up 27 hours    0.0.0.0:3306->3306/tcp    trail_db_development_1
+d91ecf79485c   solr:5.5    "docker-entrypoint.s…"   5 weeks ago      Up 3 days      0.0.0.0:8983->8983/tcp    solr
+bash-3.2$ docker docker exe [Kc -it todo-backend_mongo_1 bash
+unknown shorthand flag: 'i' in -it
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/user/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides
+                           DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default
+                           "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/user/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/user/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/user/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.7.1)
+  compose*    Docker Compose (Docker Inc., v2.2.1)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  scan*       Docker Scan (Docker Inc., v0.11.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+[1mTo get more help with docker, check out our guides at https://docs.docker.com/go/guides/[0m
+
+bash-3.2$ docker docker exec -it todo-backend_mongo_1 bash[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P
+]0;root@06379edf397c: /root@06379edf397c:/# [K]0;root@06379edf397c: /root@06379edf397c:/# mnongo -u root -o   p example[1P
+MongoDB shell version v5.0.5
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e869c31b-59b5-49c4-a41e-0ed487b2c90e") }
+MongoDB server version: 5.0.5
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-01-17T19:50:09.223+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use the-[3G[Juse the[10G_databse[3G[Juse the_databs[17G[3G[Juse the_datab[16Gase[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find({)[3G[Jdb.todos.find({[18G})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61e5c2262a8b818e15bb0acd"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61e5c2262a8b818e15bb0ace"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("61e5c97464c1a83795c61a7d"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> db.todos.insertOne( { } )[3G[Jdb.todos.insertOne[1;34m([0m { } )[27G[3G[Jdb.todos.insertOne( { } )[26G[3G[Jdb.todos.insertOne( [1;34m{[0m } )[25G[3G[Jdb.todos.insertOne( { } )[24G[3G[Jdb.todos.insertOne( {  } )[25G[3G[Jdb.todos.insertOne( {  } )[24G[3G[Jdb.todos.insertOne( {   } )[25G[3G[Jdb.todos.insertOne( { t  } )[26G[3G[Jdb.todos.insertOne( { te  } )[27G[3G[Jdb.todos.insertOne( { tex  } )[28G[3G[Jdb.todos.insertOne( { text  } )[29G[3G[Jdb.todos.insertOne( { tex  } )[28G[3G[Jdb.todos.insertOne( { te  } )[27G[3G[Jdb.todos.insertOne( { t  } )[26G[3G[Jdb.todos.insertOne( {   } )[25G[3G[Jdb.todos.insertOne( { "  } )[26G[3G[Jdb.todos.insertOne( { "t  } )[27G[3G[Jdb.todos.insertOne( { "te  } )[28G[3G[Jdb.todos.insertOne( { "tex  } )[29G[3G[Jdb.todos.insertOne( { "text  } )[30G[3G[Jdb.todos.insertOne( { "text"  } )[31G[3G[Jdb.todos.insertOne( { "text":  } )[32G[3G[Jdb.todos.insertOne( { "text":   } )[33G[3G[Jdb.todos.insertOne( { "text": "  } )[34G[3G[Jdb.todos.insertOne( { "text": "A  } )[35G[3G[Jdb.todos.insertOne( { "text": "An  } )[36G[3G[Jdb.todos.insertOne( { "text": "Ano  } )[37G[3G[Jdb.todos.insertOne( { "text": "Anot  } )[38G[3G[Jdb.todos.insertOne( { "text": "Anoth  } )[39G[3G[Jdb.todos.insertOne( { "text": "Anothe  } )[40G[3G[Jdb.todos.insertOne( { "text": "Another  } )[41G[3G[Jdb.todos.insertOne( { "text": "Another   } )[42G[3G[Jdb.todos.insertOne( { "text": "Another n  } )[43G[3G[Jdb.todos.insertOne( { "text": "Another no  } )[44G[3G[Jdb.todos.insertOne( { "text": "Another not  } )[45G[3G[Jdb.todos.insertOne( { "text": "Another note  } )[46G[3G[Jdb.todos.insertOne( { "text": "Another note   } )[47G[3G[Jdb.todos.insertOne( { "text": "Another note s  } )[48G[3G[Jdb.todos.insertOne( { "text": "Another note si  } )[49G[3G[Jdb.todos.insertOne( { "text": "Another note sin  } )[50G[3G[Jdb.todos.insertOne( { "text": "Another note sinc  } )[51G[3G[Jdb.todos.insertOne( { "text": "Another note since  } )[52G[3G[Jdb.todos.insertOne( { "text": "Another note since   } )[53G[3G[Jdb.todos.insertOne( { "text": "Another note since t  } )[54G[3G[Jdb.todos.insertOne( { "text": "Another note since th  } )[55G[3G[Jdb.todos.insertOne( { "text": "Another note since the  } )[56G[3G[Jdb.todos.insertOne( { "text": "Another note since the   } )[57G[3G[Jdb.todos.insertOne( { "text": "Another note since the p  } )[58G[3G[Jdb.todos.insertOne( { "text": "Another note since the pr  } )[59G[3G[Jdb.todos.insertOne( { "text": "Another note since the pre  } )[60G[3G[Jdb.todos.insertOne( { "text": "Another note since the prev  } )[61G[3G[Jdb.todos.insertOne( { "text": "Another note since the previ  } )[62G[3G[Jdb.todos.insertOne( { "text": "Another note since the previo  } )[63G[3G[Jdb.todos.insertOne( { "text": "Another note since the previou  } )[64G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous  } )[65G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous   } )[66G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous t  } )[67G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous ti  } )[68G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous tim  } )[69G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time  } )[70G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time   } )[71G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I  } )[72G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I   } )[73G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I w  } )[74G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I   } )[73G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I s  } )[74G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I si  } )[75G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I sis  } )[76G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I sisn  } )[77G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I sisn'  } )[78G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I sisn  } )[77G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I sis  } )[76G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I si  } )[75G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I s  } )[74G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I   } )[73G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I d  } )[74G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I di  } )[75G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did  } )[76G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did   } )[77G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did n  } )[78G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did no  } )[79G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not  } )[80G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not   } )[81G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not r  } )[82G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not ru  } )[83G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not rui  } )[84G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not ruin  } )[85G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not ruin   } )[86G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not ruin  } )[85G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not rui  } )[84G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not ru  } )[83G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run  } )[84G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run   } )[85G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run s  } )[86G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run sc  } )[87G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run scr  } )[88G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run scri  } )[89G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run scrip  } )[90G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script  } )[91G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script"  } )[92G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script"   } )[93G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script"  } )[92G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script",  } )[93G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script",   } )[94G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2  } )[95G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2d  } )[96G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2do  } )[97G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2don  } )[98G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2done  } )[99G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2don  } )[98G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2do  } )[97G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2d  } )[96G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", 2  } )[95G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script",   } )[94G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "  } )[95G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "d  } )[96G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "do  } )[97G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "don  } )[98G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done  } )[99G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done"  } )[100G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done"   } )
+[1A[101G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done"  } )[100G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done":  } )
+[1A[101G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done":   } )[1A[102G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done": f  } )[1A[103G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done": fa  } )[1A[104G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done": fal  } )[1A[105G[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done": fals  } )[1G[1A[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done": false  } )[2G[1A[3G[Jdb.todos.insertOne( { "text": "Another note since the previous time I did not run script", "done": false  } )[7G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("61e5ca851f1049be46dc5049")
+}
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("61e5c2262a8b818e15bb0acd"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("61e5c2262a8b818e15bb0ace"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("61e5c97464c1a83795c61a7d"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+{ "_id" : ObjectId("61e5ca851f1049be46dc5049"), "text" : "Another note since the previous time I did not run script", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;root@06379edf397c: /root@06379edf397c:/# exit
+exit
+bash-3.2$ exit
+exit
+
+Script done on Mon Jan 17 21:59:15 2022
